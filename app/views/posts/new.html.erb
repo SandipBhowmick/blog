@@ -1,0 +1,10 @@
+<%= link_to("< Back to Main", {:action => 'index'}, :class => 'back-link') %>
+<div class ="new post">
+	<h2> Add a post</h2>
+	<%= form_for(:post, :url => {:action => 'create'}) do |f| %>
+		<%= render(:partial => "form", :locals => {:f => f}) %>
+		<div class="form-buttons">
+			<%= submit_tag("Create a post") %>
+		</div>
+	<% end %>
+</div>
