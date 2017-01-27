@@ -1,8 +1,15 @@
 <% @post_title = "Users" %>
 <div class ="show post">
-	<h2> <%= @post.post_title %> </h2>
+	<h2> <%= @post.title %> </h2>
 	<p> Created at: <%= @post.created_at %> </p>
-	<p><%= @post.post_body %></p>
+	<p><%= @post.body %></p>
+	<div>
+		<h2><%= @post.comments.count %> Comments </h2>
+		<%= render @post.comments %>
+		<h3>Add a comment: </h3>
+		<%= render "comments/form" %>
+	</div>
+
 </div>
 
 

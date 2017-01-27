@@ -1,6 +1,8 @@
 <% @posts.each do |post| %>
 	<div class="post">
-		<h2 class="title"><%= link_to post.post_title, post %></h2>
-		<p class="data"><%= post.created_at.to_date %></p>
+		<h2 class="title"><%= link_to post.title, post %></h2>
+		<div><%= link_to "edit", edit_post_path(post) %>|
+		<%= link_to("Delet", post, method: :delete, :data => {:confirm => 'Are you sure?'}) %></div>
+		<p class="data">"Created at: <%= post.created_at.to_date %></p>
 	</div>
 <% end %> 

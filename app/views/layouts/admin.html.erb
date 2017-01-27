@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BLOG|<%= @post_title || "Admin" %></title>
+		<%= stylesheet_link_tag('application', :media =>'all') %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>  		
+  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div id="header">
+			<h1> Blog post</h1>
+		</div>		
+		<div id="main">
+			<% if !flash[:notice].blank? %>
+ 				<div class="notice">
+    			<%= flash[:notice] %>
+  				</div>
+  			<% end %>
+  			<div>
+  				</div>
+  				<!-- <div align="right">
+  				<button class="button">Log out</button>
+  				</div> -->
+  				<div align="left">
+  				<ul><u><%= link_to "New Post", new_post_path %></u></ul>	
+  			</div>
+			<div id="content">
+			<%= yield %>
+			</div>
+		</div>
+		<div><p class="sign_in">Admin login</p></div>
+		<div id="footer">
+		<p id="Copyright">&copy; https://www.sandip.com / Sandip Bhowmick </p>
+		</div>
+	</body>
+</html>	
+

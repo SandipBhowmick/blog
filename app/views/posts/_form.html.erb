@@ -1,10 +1,13 @@
+ 
+<%= error_messages_for(@post) %>
+
  <table summary="Share form fields">
 	<tr>
-		<th><%= f.label(:post_title, "Title")%></th>
-		<td><%= f.text_field(:post_title)%></td>
+		<th><%= f.label(:title, "Title")%></th>
+		<td><%= f.text_field(:title)%></td>
 	</tr>
 	<tr>
-		<th><%= f.label(:post_body, "Body")%></th>
-		<td><%= f.text_field(:post_body)%></td>
+		<th><%= f.label(:body, "Body")%></th>
+		<td><%= f.text_field(:body)%></td>
 	</tr>		
 </table>

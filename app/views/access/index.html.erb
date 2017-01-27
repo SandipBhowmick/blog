@@ -1,0 +1,12 @@
+<% @user_title = "User Menu" %>
+
+<div class="menu">
+	<h2> User Menu </h2>
+	<div class="idntity">Logged in as:<%= session[:username] %></div>
+	<ul>
+		<li><%= link_to("Manage Blog", :controller => 'posts')%></li>
+		<li><%= link_to("Manage  Users", :controller => 'users') %></li>
+		<li><%= link_to("Logout", :action => 'logout') %></li>
+	</ul>
+</div>
+
